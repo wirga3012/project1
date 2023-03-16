@@ -1,3 +1,7 @@
+import org.w3c.dom.ls.LSOutput;
+
+import java.sql.SQLOutput;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -49,52 +53,52 @@ public class Main {
 
 //        String name41 = "Johnny";
 //        String name42 = "Depp";
-//        String lastThirdLetter = name41.substring ( name41.length() - 3) + name42.substring ( name42.length() - 3) ;
-//        System.out.println(lastThirdLetter);
+//        String lastThirdLetters = name41.substring ( name41.length() - 3) + name42.substring ( name42.length() - 3) ;
+//        System.out.println(lastThirdLetters);
 
         /*
         5.Užduotis.Sukurti kintamąjį su stringu: “An American in Paris”. Jame visas “a”
         (didžiąsias ir mažąsias) pakeisti žvaigždutėm “*”.  Rezultatą atspausdinti.
          */
-
-        String title1 = "An American in Paris";
-        System.out.println(title1.replaceAll("[Aa]", "*"));
-        System.out.println(title1.replace('a', '*').replace('A', '*'));
+//
+//        String title1 = "An American in Paris";
+//        System.out.println(title1.replaceAll("[Aa]", "*"));
+//        System.out.println(title1.replace('a', '*').replace('A', '*'));
+////
+////        /*
+////        6.Užduotis.Sukurti kintamąjį su stringu: “An American in Paris”. Jame ištrinti visas balses.
+////        Rezultatą atspausdinti. Kodą pakartoti su stringais: “Breakfast at Tiffany's”,
+////        “2001: A Space Odyssey” ir “It's a Wonderful Life”.
+////         */
+//        String title2 = "An American in Paris";
+//        String title3 = "Breakfast at Tiffany's";
+//        String title4 = "2001: A Space Odyssey";
+//        String title5 = "It's a Wonderful Life";
+//
+//        System.out.println(title2.replaceAll("[AaEeIiyYOoUu]", ""));
+//        System.out.println(title3.replaceAll("[AaEeIiyYOoUu]", ""));
+//        System.out.println(title4.replaceAll("[AaEeIiyYOoUu]", ""));
+//        System.out.println(title5.replaceAll("[AaEeIiyYOoUu]", ""));
 //
 //        /*
-//        6.Užduotis.Sukurti kintamąjį su stringu: “An American in Paris”. Jame ištrinti visas balses.
-//        Rezultatą atspausdinti. Kodą pakartoti su stringais: “Breakfast at Tiffany's”,
-//        “2001: A Space Odyssey” ir “It's a Wonderful Life”.
+//        7.Užduotis.Stringe, kurį generuoja toks kodas:
+//        "Star Wars: Episode "+ " ".repeat( (int) (Math.random() * 10))+((int) (Math.random() * 7)+1) + " - A New Hope"
+//        Surasti ir atspausdinti epizodo numerį.
 //         */
-        String title2 = "An American in Paris";
-        String title3 = "Breakfast at Tiffany's";
-        String title4 = "2001: A Space Odyssey";
-        String title5 = "It's a Wonderful Life";
-
-        System.out.println(title2.replaceAll("[AaEeIiOoUu]", ""));
-        System.out.println(title3.replaceAll("[AaEeIiOoUu]", ""));
-        System.out.println(title4.replaceAll("[AaEeIiOoUu]", ""));
-        System.out.println(title5.replaceAll("[AaEeIiOoUu]", ""));
-
-        /*
-        7.Užduotis.Stringe, kurį generuoja toks kodas:
-        "Star Wars: Episode "+ " ".repeat( (int) (Math.random() * 10))+((int) (Math.random() * 7)+1) + " - A New Hope"
-        Surasti ir atspausdinti epizodo numerį.
-         */
-        String starWars = "Star Wars: Episode "+ " ".repeat( (int) (Math.random() * 10))+((int) (Math.random() * 7)+1) + " - A New Hope";
-        String starWars2 = "Star Wars: Episode "+ " ".repeat( (int) (Math.random() * 10))+((int) (Math.random() * 7)+1) + " - A New Hope";
-        String starWars3 = "Star Wars: Episode "+ " ".repeat( (int) (Math.random() * 10))+((int) (Math.random() * 7)+1) + " - A New Hope";
-        System.out.println(starWars);
-        System.out.println(starWars2);
-        System.out.println(starWars3);
-        // abcdgsgsdg.ilgis() - 2 = s;
-//        int lengthFromBack = starWars.length()-14;
-//        String endString = starWars.substring(lengthFromBack);
-
-        System.out.println("Episode: " +  starWars.substring(starWars.length()-14).substring(0, 1));
-
-//        int hours = 12;
-//        String hoursS = "0" + hours;
+//        String starWars = "Star Wars: Episode "+ " ".repeat( (int) (Math.random() * 10))+((int) (Math.random() * 7)+1) + " - A New Hope";
+//        String starWars2 = "Star Wars: Episode "+ " ".repeat( (int) (Math.random() * 10))+((int) (Math.random() * 7)+1) + " - A New Hope";
+//        String starWars3 = "Star Wars: Episode "+ " ".repeat( (int) (Math.random() * 10))+((int) (Math.random() * 7)+1) + " - A New Hope";
+//        System.out.println(starWars);
+//        System.out.println(starWars2);
+//        System.out.println(starWars3);
+//        // abcdgsgsdg.ilgis() - 2 = s;
+////        int lengthFromBack = starWars.length()-14;
+////        String endString = starWars.substring(lengthFromBack);
+//
+//        System.out.println("Episode: " +  starWars.substring(starWars.length()-14).substring(0, 1));
+//
+////        int hours = 12;
+////        String hoursS = "0" + hours;
 //        hoursS.substring(hoursS.length() -2); // 09 012
 //        System.out.println(hoursS.substring(hoursS.length() -2));
 
@@ -109,6 +113,109 @@ public class Main {
         10. Parašykite kodą, kuris generuotų atsitiktinį stringą su 10 atsitiktine tvarka išdėliotų žodžių,
          o žodžius generavimui imtų iš 9-me uždavinyje pateiktų dviejų stringų. Žodžiai neturi kartotis. (reikės masyvo)
          */
+
+        System.out.println("MASYVAI");
+
+        {int num [] = {1,4,6,0,4,8};
+            System.out.println(num [0]);
+            System.out.println(num [1]);
+            System.out.println(num [2]);
+            System.out.println(num [3]);
+            System.out.println(num [4]);
+            System.out.println(num [5]);
+
+
+
+        {int [][]array2d = {
+                {1,2,3},
+                {4,5,6},
+
+        };
+            System.out.println(array2d[0][0] + "," + array2d[0][1] + "," + array2d[0][2]);
+            System.out.println(array2d[1][0]);
+
+
+//            Sukurkite ciklą kuris atspausdintų 10 kartų žodį “labas”.
+            System.out.println("-----1 užduotis------");
+            for (int i = 0; i <10; i++ ){
+                System.out.println("labas");
+            }
+//            Sukurkite ciklą kuris atspausdintų skaičius nuo 0 iki 9.
+            System.out.println("-----2 užduotis------");
+            for (int i = 0; i < 10 ; i++ ){
+                System.out.println(i);
+            }
+//            Sukurkite masyvą su dešimties augalų pavadinimų.
+            System.out.println("-----3 užduotis------");
+
+            String [] plantName = {"aguona","ramune" ,"bijūnas","rožė","erškėtis","raktažolė", "puriena", "tulpė","pakalnutė","rozmarinas"};
+            for (int i = 0; i < plantName.length; i++){
+//
+                System.out.println(plantName[i]);
+            }
+//           Atspausdinkite 3čio uždavinio kiekvieną augalą pradedant nuo paskutinio, ir baigiant pirmuoju. (atvirkščias ciklas).
+
+            System.out.println("-----5 Užduotis----------");
+            for (int i = plantName.length - 1; i >= 0 ; i--) {
+                System.out.println(plantName[i]);
+            }
+
+//            Atspausdinkite kas antrą skaičių nuo 10 iki 50 (porinius)
+
+            System.out.println("----6 Užduotis--------------");
+            System.out.println("----7 Užduotis--------------");
+            System.out.println("----8 Užduotis--------------");
+            System.out.println("----9 Užduotis--------------");
+            System.out.println("----10 Užduotis-------------");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
 
 
     }
