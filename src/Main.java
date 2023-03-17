@@ -166,8 +166,8 @@ public class Main {
 
         System.out.println("----7 Užduotis--------------");
 
-        for (int i = 10; i <= 50 ; i++) {
-            if (i % 10 == 0){
+        for (int i = 10; i <= 50; i++) {
+            if (i % 10 == 0) {
                 continue;
             }
             System.out.println(i);
@@ -177,8 +177,8 @@ public class Main {
 
         System.out.println("----8 Užduotis--------------");
         int sum = 0;
-        for (int i = 0; i < 20; i++) {
-            if (i % 2 == 0){
+        for (int i = 0; i <= 20; i++) {
+            if (i % 2 == 0) {
                 sum++;
             }
         }
@@ -191,10 +191,10 @@ public class Main {
         int longNamesCount = 0;
 
         for (int i = 0; i < plantNames.length; i++) {
-            if (plantNames[i].length() < 5){
+            if (plantNames[i].length() < 5) {
                 shortNamesCount++;
             }
-            if (plantNames[i].length() > 7){
+            if (plantNames[i].length() > 7) {
                 longNamesCount++;
             }
         }
@@ -208,7 +208,7 @@ public class Main {
         int between = 0;
 
         for (int i = 0; i < plantNames.length; i++) {
-            if (plantNames[i].length()> 5 && plantNames[i].length() < 10){
+            if (plantNames[i].length() > 5 && plantNames[i].length() < 10) {
                 between++;
             }
         }
@@ -222,9 +222,104 @@ public class Main {
 //        }
 
 
+//        SUNKESNI UŽDAVINIAI.
+//        Sugeneruokite 300 atsitiktinių skaičių nuo 0 iki 300, atspausdinkite juos atskirtus tarpais ir suskaičiuokite kiek tarp jų yra didesnių už 150.
+//        Skaičiai didesni nei 275 turi būti atspausdinti skliausteliuose” [ ] “.
+
+        System.out.println("--------1 Užduotis-------");
+
+        int atsitiktiniaiDidesniUz150 = 0;
+        int didesniUz275 = 0;
+        String num1 = "";
+        String num2 = "";
+
+        for (int i = 0; i < 300; i++) {
+
+            int atsitiktinis = (int) Math.round(Math.random() * 300);
+
+            if (atsitiktinis > 150 && atsitiktinis < 275) {
+                atsitiktiniaiDidesniUz150++;
+                num1 += atsitiktinis + " ";
+            } else if (atsitiktinis > 275) {
+                didesniUz275++;
+                num2 += "[" + atsitiktinis + "]";
+            }
+        }
+
+        System.out.println("Didesnių nei 150 skaičių - " + atsitiktiniaiDidesniUz150);
+        System.out.println(num1);
+        System.out.println(num2);
+
+//  Vienoje eilutėje atspausdinkite visus skaičius nuo 1 iki 3000, kurie dalijasi iš 77 be liekanos. Skaičius atskirkite kableliais.
+//  Po paskutinio skaičiaus kablelio neturi būti.
+
+        System.out.println("--------2 Užduotis-------");
+
+        String skaiciaiKurieDalijasiis77 = "";
 
 
+        for (int i = 1; i <= 3000; i++) {
+            if (i % 77 == 0) {
+                skaiciaiKurieDalijasiis77 += i + ", ";
+            }
+
+        }
+
+        System.out.println(skaiciaiKurieDalijasiis77.substring(0, skaiciaiKurieDalijasiis77.length() - 2));
+
+//        Nupieškite kvadratą iš “*”, kurio kraštines sudaro 25“*”.
+//* * * * * * * * * * *
+//* * * * * * * * * * *
+//* * * * * * * * * * *
+//* * * * * * * * * * *
+//* * * * * * * * * * *
+//* * * * * * * * * * *
+//* * * * * * * * * * *
+
+        System.out.println("--------3 Užduotis-------");
+
+        int width = 25; // total width of the rectangle
+        int height = 10; // total height of the rectangle
+
+        for (int i = 1; i <= height; i++) {
+            for (int j = 1; j <= width; j++) {
+                if (i == 1 || i == height || j == 1 || j == width) {
+                    System.out.print("*");
+                } else if ((j - 1) % 5 == 0 && (i - 1) % 5 == 0) {
+                    System.out.print(" ");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+
+
+
+
+
+        for (int i = 0; i < 25; i++) {
+            String stars = "";
+            for (int b = 0; b < 25; b++) {
+                stars += "*";
+
+            }
+            System.out.println(stars);
+
+        }
 
 
     }
+
+
+//            System.out.println("--------3 Užduotis-------");
+//            System.out.println("--------4 Užduotis-------");
+//            System.out.println("--------5 Užduotis-------");
+//            System.out.println("--------6 Užduotis-------");
+//            System.out.println("--------7 Užduotis-------");
+//            System.out.println("--------8 Užduotis-------");
+//            System.out.println("--------9 Užduotis-------");
+
+
 }
+
