@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
         /*
@@ -316,27 +318,132 @@ public class Main {
 
         int number1 = 1;
         int herb = 0;
+        int counter = 0;
+
+        System.out.println("1 scenarijus iskritus herbui");
 
         while (true) {
 
             int coin = (int) (Math.round(Math.random()));
-            if (coin == herb){
+            if (coin == herb) {
                 System.out.println("H");
                 break;
-            }
-            else{
+
+            } else {
                 System.out.println("S");
             }
         }
+
+        System.out.println("2 scenarijus iskritus tris kartus herbui");
+
+        while (true) {
+
+            int coin = (int) (Math.round(Math.random()));
+            if (coin == herb) {
+                System.out.println("H");
+                counter++;
+
+            } else {
+                System.out.println("S");
+            }
+            if(counter == 3){
+                break;
+            }
+        }
+        System.out.println("3 scenarijus iskritus is eiles tris kartus herbui");
+
+        counter = 0;
+        while (counter < 3) {
+
+            int coin = (int) (Math.round(Math.random()));
+            if (coin == herb) {
+                System.out.println("H");
+                counter++;
+
+            } else {
+                System.out.println("S");
+                counter = 0;
+            }
+
+        }
+
+//  Kazys ir Petras žaidžia šaškėm. Petras surenka taškų kiekį nuo 10 iki 20, Kazys surenka taškų kiekį nuo 5 iki 25.
+//  Vienoje eilutėje išvesti žaidėjų vardus su taškų kiekiu ir “Partiją laimėjo: ​laimėtojo vardas​”.
+//  Taškų kiekį generuokite funkcija ​Math.random()​. Žaidimą laimi tas, kas greičiau surenka 222 taškus.
+//  Partijas kartoti tol, kol kažkuris žaidėjas pirmas surenka 222 arba daugiau taškų.
+
+        int kazioTaskai = 0;
+        int petroTaskai = 0;
+        int taskai = 222;
+
+        while (true){
+            kazioTaskai += 5 + (int)(Math.round(Math.random() * 20));
+            petroTaskai += 10 + (int)(Math.round(Math.random() * 10));
+            if (kazioTaskai >= taskai && petroTaskai < taskai){
+                System.out.println("Partija laimejo Kazys " + kazioTaskai + " Petro taskai " + petroTaskai);
+                break;
+            }
+            if (petroTaskai >= taskai){
+                System.out.println("Partija laimejo Petras " + petroTaskai + " Kazio taskai " + kazioTaskai);
+                break;
+            }
+
+        }
+//  Sumodeliuokite vinies kalimą. Įkalimo gylį sumodeliuokite pasinaudodami Math.random() funkcija. Vinies ilgis 8.5cm
+//  (pilnai sulenda į lentą).
+//  “Įkalkite” 5 vinis mažais smūgiais. Vienas smūgis vinį įkala 5-20 mm. Suskaičiuokite kiek reikia smūgių.
+//  “Įkalkite” 5 vinis dideliais smūgiais. Vienas smūgis vinį įkala 20-30 mm, bet yra 50% tikimybė
+//  (pasinaudokite Math.random() funkcija tikimybei sumodeliuoti), kad smūgis nepataikys į vinį. Suskaičiuokite kiek reikia smūgių.
+
+        int viniesIlgis = 85;
+        int nesukaltasViniesIlgis = viniesIlgis;
+        int viniuSkaicius = 5;
+        int smugiuSkaicius = 0;
+
+        while (viniuSkaicius > 0){
+            int ikalimoGylis = 5 + (int)(Math.round(Math.random() * 20));
+            nesukaltasViniesIlgis -= ikalimoGylis;
+            smugiuSkaicius ++;
+            if (nesukaltasViniesIlgis <= 0){
+                viniuSkaicius --;
+                nesukaltasViniesIlgis = viniesIlgis;
+
+            }
+        }
+        System.out.println("Smugiu skaicius " + smugiuSkaicius);
+
+        viniuSkaicius = 5;
+        smugiuSkaicius = 0;
+        nesukaltasViniesIlgis = viniesIlgis;
+
+        Random random = new Random();
+
+        while (viniuSkaicius > 0){
+            boolean nepataike = random.nextBoolean();
+            // jeigu nepataike tai tesiam
+            smugiuSkaicius ++;
+            if(nepataike){
+                continue;
+            }
+
+            int ikalimoGylis = 20 + (int)(Math.round(Math.random() * 30));
+            nesukaltasViniesIlgis -= ikalimoGylis;
+
+            if (nesukaltasViniesIlgis <= 0){
+                viniuSkaicius --;
+                nesukaltasViniesIlgis = viniesIlgis;
+
+            }
+        }
+        System.out.println("Smugiu skaicius " + smugiuSkaicius);
 
 
 
 
     }
+
+
 }
-
-
-
 
 
 
