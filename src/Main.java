@@ -63,33 +63,37 @@ public class Main {
 ////        Rezultatą atspausdinti. Kodą pakartoti su stringais: “Breakfast at Tiffany's”,
 ////        “2001: A Space Odyssey” ir “It's a Wonderful Life”.
 ////         */
-//        String title2 = "An American in Paris";
-//        String title3 = "Breakfast at Tiffany's";
-//        String title4 = "2001: A Space Odyssey";
-//        String title5 = "It's a Wonderful Life";
-//
-//        System.out.println(title2.replaceAll("[AaEeIiyYOoUu]", ""));
-//        System.out.println(title3.replaceAll("[AaEeIiyYOoUu]", ""));
-//        System.out.println(title4.replaceAll("[AaEeIiyYOoUu]", ""));
-//        System.out.println(title5.replaceAll("[AaEeIiyYOoUu]", ""));
+        String title2 = "An American in Paris";
+        String title3 = "Breakfast at Tiffany's";
+        String title4 = "2001: A Space Odyssey";
+        String title5 = "It's a Wonderful Life";
+
+        System.out.println(title2.replaceAll("[AaEeIiyYOoUu]", ""));
+        System.out.println(title3.replaceAll("[AaEeIiyYOoUu]", ""));
+        System.out.println(title4.replaceAll("[AaEeIiyYOoUu]", ""));
+        System.out.println(title5.replaceAll("[AaEeIiyYOoUu]", ""));
 //
 //        /*
 //        7.Užduotis.Stringe, kurį generuoja toks kodas:
 //        "Star Wars: Episode "+ " ".repeat( (int) (Math.random() * 10))+((int) (Math.random() * 7)+1) + " - A New Hope"
 //        Surasti ir atspausdinti epizodo numerį.
 //         */
-//        String starWars = "Star Wars: Episode "+ " ".repeat( (int) (Math.random() * 10))+((int) (Math.random() * 7)+1) + " - A New Hope";
-//        String starWars2 = "Star Wars: Episode "+ " ".repeat( (int) (Math.random() * 10))+((int) (Math.random() * 7)+1) + " - A New Hope";
-//        String starWars3 = "Star Wars: Episode "+ " ".repeat( (int) (Math.random() * 10))+((int) (Math.random() * 7)+1) + " - A New Hope";
-//        System.out.println(starWars);
-//        System.out.println(starWars2);
-//        System.out.println(starWars3);
-//        // abcdgsgsdg.ilgis() - 2 = s;
-////        int lengthFromBack = starWars.length()-14;
-////        String endString = starWars.substring(lengthFromBack);
-//
-//        System.out.println("Episode: " +  starWars.substring(starWars.length()-14).substring(0, 1));
-//
+        String starWars = "Star Wars: Episode " + " ".repeat((int) (Math.random() * 10)) + ((int) (Math.random() * 7) + 1) + " - A New Hope";
+        String starWars2 = "Star Wars: Episode " + " ".repeat((int) (Math.random() * 10)) + ((int) (Math.random() * 7) + 1) + " - A New Hope";
+        String starWars3 = "Star Wars: Episode " + " ".repeat((int) (Math.random() * 10)) + ((int) (Math.random() * 7) + 1) + " - A New Hope";
+        System.out.println(starWars);
+        System.out.println(starWars2);
+        System.out.println(starWars3);
+        // abcdgsgsdg.ilgis() - 2 = s;
+        int lengthFromBack = starWars.length() - 14;
+        String endString = starWars.substring(lengthFromBack);
+        String firstWord = starWars.substring(0, 4);
+        String episodeNum = endString.substring(0, 1);
+        int number = 7;
+
+        System.out.println("Episode: " + firstWord + " " + episodeNum);
+        System.out.println(String.format("Episode: %s %s, number = %2d", firstWord, episodeNum, number));
+
 ////        int hours = 12;
 ////        String hoursS = "0" + hours;
 //        hoursS.substring(hoursS.length() -2); // 09 012
@@ -201,7 +205,8 @@ public class Main {
 
         System.out.println("trumpesni simboliai- " + shortNamesCount + " ilgesni simboliai" + longNamesCount);
 
-//      Suskaičiuokite kiek 3čio uždavinio masyve yra žodžių ilgesnių nei 5 simboliai bet trumpesnių  nei 10 simboliai. (tarp 5 ir 10 simbolių ilgio)
+//      Suskaičiuokite kiek 3čio uždavinio masyve yra žodžių ilgesnių nei 5 simboliai bet trumpesnių  nei 10 simboliai.
+//      (tarp 5 ir 10 simbolių ilgio)
 
         System.out.println("----10 Užduotis-------------");
 
@@ -223,8 +228,8 @@ public class Main {
 
 
 //        SUNKESNI UŽDAVINIAI.
-//        Sugeneruokite 300 atsitiktinių skaičių nuo 0 iki 300, atspausdinkite juos atskirtus tarpais ir suskaičiuokite kiek tarp jų yra didesnių už 150.
-//        Skaičiai didesni nei 275 turi būti atspausdinti skliausteliuose” [ ] “.
+//        Sugeneruokite 300 atsitiktinių skaičių nuo 0 iki 300, atspausdinkite juos atskirtus tarpais ir suskaičiuokite
+//        kiek tarp jų yra didesnių už 150.Skaičiai didesni nei 275 turi būti atspausdinti skliausteliuose” [ ] “.
 
         System.out.println("--------1 Užduotis-------");
 
@@ -281,45 +286,62 @@ public class Main {
         int width = 25; // total width of the rectangle
         int height = 10; // total height of the rectangle
 
-        for (int i = 1; i <= height; i++) {
-            for (int j = 1; j <= width; j++) {
-                if (i == 1 || i == height || j == 1 || j == width) {
-                    System.out.print("*");
-                } else if ((j - 1) % 5 == 0 && (i - 1) % 5 == 0) {
-                    System.out.print(" ");
-                } else {
-                    System.out.print(" ");
-                }
+//        for (int i = 1; i <= height; i++) {
+//            for (int j = 1; j <= width; j++) {
+//                if (i == 1 || i == height || j == 1 || j == width) {
+//                    System.out.print("*");
+//                } else if ((j - 1) % 5 == 0 && (i - 1) % 5 == 0) {
+//                    System.out.print(" ");
+//                } else {
+//                    System.out.print(" ");
+//                }
+//            }
+//            System.out.println();
+////        }
+//        for (int i = 0; i < 7; i++) {
+//            String stars = "";
+//        }
+//        for (int b = 0; b < 25; b++) {
+//            stars+= "*";
+//
+//        System.out.println(stars);}
+
+
+//  Metam monetą. Monetos kritimo rezultatą imituojam Math.random() funkcija, kur 0 yra herbas, o 1 - skaičius.
+//  Monetos metimo rezultatus išvedame į ekraną atskiroje eilutėje: “S” jeigu iškrito skaičius ir “H” jeigu herbas.
+//  Suprogramuokite tris skirtingus scenarijus kai monetos metimą stabdome:
+//  Iškritus herbui;
+//  Tris kartus iškritus herbui;
+//  Tris kartus iš eilės iškritus herbui;
+
+        int number1 = 1;
+        int herb = 0;
+
+        while (true) {
+
+            int coin = (int) (Math.round(Math.random()));
+            if (coin == herb){
+                System.out.println("H");
+                break;
             }
-            System.out.println();
+            else{
+                System.out.println("S");
+            }
         }
 
 
-
-
-
-        for (int i = 0; i < 25; i++) {
-            String stars = "";
-            for (int b = 0; b < 25; b++) {
-                stars += "*";
-
-            }
-            System.out.println(stars);
-
-        }
 
 
     }
-
-
-//            System.out.println("--------3 Užduotis-------");
-//            System.out.println("--------4 Užduotis-------");
-//            System.out.println("--------5 Užduotis-------");
-//            System.out.println("--------6 Užduotis-------");
-//            System.out.println("--------7 Užduotis-------");
-//            System.out.println("--------8 Užduotis-------");
-//            System.out.println("--------9 Užduotis-------");
-
-
 }
+
+
+
+
+
+
+
+
+
+
 
