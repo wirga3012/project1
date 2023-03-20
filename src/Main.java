@@ -294,19 +294,18 @@ public class Main {
 //  Tris kartus iškritus herbui;
 //  Tris kartus iš eilės iškritus herbui;
 
-        int number1 = 1;
+        System.out.println("--------5 Užduotis-------");
+
         int herb = 0;
         int counter = 0;
 
         System.out.println("1 scenarijus iskritus herbui");
 
         while (true) {
-
             int coin = (int) (Math.round(Math.random()));
             if (coin == herb) {
                 System.out.println("H");
                 break;
-
             } else {
                 System.out.println("S");
             }
@@ -350,6 +349,8 @@ public class Main {
 //  Taškų kiekį generuokite funkcija ​Math.random()​. Žaidimą laimi tas, kas greičiau surenka 222 taškus.
 //  Partijas kartoti tol, kol kažkuris žaidėjas pirmas surenka 222 arba daugiau taškų.
 
+        System.out.println("--------6 Užduotis-------");
+
         int kazioTaskai = 0;
         int petroTaskai = 0;
         int taskai = 222;
@@ -373,13 +374,15 @@ public class Main {
 //  “Įkalkite” 5 vinis dideliais smūgiais. Vienas smūgis vinį įkala 20-30 mm, bet yra 50% tikimybė
 //  (pasinaudokite Math.random() funkcija tikimybei sumodeliuoti), kad smūgis nepataikys į vinį. Suskaičiuokite kiek reikia smūgių.
 
+        System.out.println("--------8 Užduotis-------");
+
         int viniesIlgis = 85;
         int nesukaltasViniesIlgis = viniesIlgis;
         int viniuSkaicius = 5;
         int smugiuSkaicius = 0;
 
         while (viniuSkaicius > 0){
-            int ikalimoGylis = 5 + (int)(Math.round(Math.random() * 20));
+            int ikalimoGylis = 5 + (int)(Math.round(Math.random() * 16));
             nesukaltasViniesIlgis -= ikalimoGylis;
             smugiuSkaicius ++;
             if (nesukaltasViniesIlgis <= 0){
