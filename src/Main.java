@@ -2,32 +2,10 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        /*
-        1.Užduotis. Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus
-        (Jonas Jonaitis). Atspausdinti trumpesnį stringą.
-         */
 
-//        String name11 = "Johnny";
-//        String name12 = "Depp";
-//        if (name11.length() < name12.length()){
-//            System.out.println(name11);
-//        }
-//        if(name12.length() < name11.length()){
-//            System.out.println(name12);
-//        }
-//        else {
-//            System.out.println(name11 + " " + name12);
-//        }
-//
-//        /*
-//        2.Užduotis.Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus.
-//        Vardą atspausdinti tik didžiosiom raidėm, o pavardę tik mažosioms.
-//         */
-//
-//        String name21 = "Johnny";
-//        String name22 = "Depp";
-//        System.out.println(name21.toUpperCase());
-//        System.out.println(name22.toLowerCase());
+        PirmaUzduotis();
+        AntraUzduotis();
+
 
         /*
         3.Užduotis.Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus.
@@ -407,9 +385,9 @@ public class Main {
             if (nesukaltasViniesIlgis <= 0){
                 viniuSkaicius --;
                 nesukaltasViniesIlgis = viniesIlgis;
-
             }
         }
+
         System.out.println("Smugiu skaicius " + smugiuSkaicius);
 
         viniuSkaicius = 5;
@@ -435,11 +413,39 @@ public class Main {
 
             }
         }
+
         System.out.println("Smugiu skaicius " + smugiuSkaicius);
+    }
 
+    public static void PirmaUzduotis() {
+           /*
+        1.Užduotis. Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus
+        (Jonas Jonaitis). Atspausdinti trumpesnį stringą.
+         */
 
+        String name11 = "Johnny";
+        String name12 = "Depp";
+        if (name11.length() < name12.length()){
+            System.out.println(name11);
+        }
+        if(name12.length() < name11.length()){
+            System.out.println(name12);
+        }
+        else {
+            System.out.println(name11 + " " + name12);
+        }
+    }
 
+    public static void AntraUzduotis() {
+        /*
+        2.Užduotis.Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus.
+        Vardą atspausdinti tik didžiosiom raidėm, o pavardę tik mažosioms.
+        */
 
+        String name21 = "Johnny";
+        String name22 = "Depp";
+        System.out.println(name21.toUpperCase());
+        System.out.println(name22.toLowerCase());
     }
 
 
